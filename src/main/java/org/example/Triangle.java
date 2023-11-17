@@ -3,11 +3,10 @@ package org.example;
 import java.util.Scanner;
 
 /**
- *
  * @author lukas kurasinski
- *Program returns the name of a triangle, based on the input.
- *The input are 3 length, describing 3 sides of a triangle,
- *Sides can be set via constructors or by a method
+ * Program returns the name of a triangle, based on the input.
+ * The input are 3 length, describing 3 sides of a triangle,
+ * Sides can be set via constructors or by a method
  */
 public class Triangle {
     public static enum TYPE {
@@ -18,7 +17,9 @@ public class Triangle {
         TYPE(String string) {
             this.thisType = string;
         }
-    };
+    }
+
+    ;
 
     private TYPE current_type;
     int a, b, c;
@@ -57,8 +58,7 @@ public class Triangle {
             } catch (NumberFormatException e) {
                 this.current_type = null;
             }
-        }
-        else {
+        } else {
             this.current_type = null;
         }
     }
