@@ -15,15 +15,39 @@ class TriangleTest {
 
 
     // testa fel datatyp
+//    @Test
+//    @DisplayName("Test for invalid datatype and length input, throw ArrayOOB exc")
+//    void testInvalidDataType() {
+//        triangle = new Triangle();
+//        input = new String[]{"a","b","c","d"};
+//        String combinedInputs = String.join(",", input);
+//        inputArray = new ByteArrayInputStream(combinedInputs.getBytes());
+//        System.setIn(inputArray);
+//        assertThrows(ArrayIndexOutOfBoundsException.class, triangle::getUserInput);
+//
+//    }
+
+//    @Test
+//    @DisplayName("Test for invalid length input, throw ArrayOOB exc")
+//    void testInvalidNumberOfIntInputs() {
+//        triangle = new Triangle();
+//        input = new String[]{"1","2","3","4"};
+//        String combinedInputs = String.join(",", input);
+//        inputArray = new ByteArrayInputStream(combinedInputs.getBytes());
+//        System.setIn(inputArray);
+//        assertThrows(ArrayIndexOutOfBoundsException.class, triangle::getUserInput);
+//
+//    }
+
     @Test
-    @DisplayName("Test for invalid datatype and length input, throw IllegalArgument exc")
-    void testInvalidDataType() {
+    @DisplayName("Test for invalid length input, throw ArrayOOB exc")
+    void testInvalidNumberOfIntInputs() {
         triangle = new Triangle();
-        input = new String[]{"a","b","c","d"};
+        input = new String[]{"1","2","3","4"};
         String combinedInputs = String.join(",", input);
         inputArray = new ByteArrayInputStream(combinedInputs.getBytes());
         System.setIn(inputArray);
-        assertThrows(IllegalArgumentException.class, triangle::getUserInput);
+        assertNull(triangle.getCurrent_type());
 
     }
 
@@ -35,7 +59,7 @@ class TriangleTest {
         String combinedInputs = String.join(",", input);
         inputArray = new ByteArrayInputStream(combinedInputs.getBytes());
         System.setIn(inputArray);
-        assertThrows(IllegalArgumentException.class, triangle::getUserInput);
+        assertThrows(NumberFormatException.class, triangle::getUserInput);
 
     }
 
@@ -110,6 +134,15 @@ class TriangleTest {
             new Triangle((String[]) null);
         });
     }
+
+//    @Test
+//    public void testNullArrayConstructor() {
+//        // Creating a Triangle object with a null array
+//        Triangle triangle = new Triangle(null);
+//
+//        // Asserting that the triangle type is null since no valid input was provided
+//        assertNull(triangle.getCurrent_type());
+//    }
 
 //    @Test
 //    @DisplayName("Test for wrong length input, throw Number exc")

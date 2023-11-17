@@ -18,9 +18,7 @@ public class Triangle {
         TYPE(String string) {
             this.thisType = string;
         }
-    }
-
-    ;
+    };
 
     private TYPE current_type;
     int a, b, c;
@@ -31,10 +29,6 @@ public class Triangle {
     }
 
     public Triangle(String[] in) {
-
-        if (in == null){ // lagt till
-            throw new NullPointerException("Null pointer");
-        }
 
         if (in.length == 3) {
             try {
@@ -62,12 +56,10 @@ public class Triangle {
                 this.setCurrent_type(Integer.parseInt(in[0]), Integer.parseInt(in[1]), Integer.parseInt(in[2]));
             } catch (NumberFormatException e) {
                 this.current_type = null;
-                throw new IllegalArgumentException("Invalid datatype"); //lagt till
             }
         }
-        else { //ändrade till else if
+        else {
             this.current_type = null;
-            throw new IllegalArgumentException("Invalid number of inputs"); //lagt till
         }
     }
 
