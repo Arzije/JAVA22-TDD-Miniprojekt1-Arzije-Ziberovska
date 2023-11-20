@@ -1,5 +1,6 @@
-package org.example;
+package org.arzije.ziberovska;
 
+import org.arzije.ziberovska.main.Triangle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

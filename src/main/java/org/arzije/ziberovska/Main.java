@@ -1,4 +1,6 @@
-package org.example;
+package org.arzije.ziberovska;
+
+import org.arzije.ziberovska.main.Triangle;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example;
+package org.arzije.ziberovska.main;
 
 import java.util.Scanner;
 
